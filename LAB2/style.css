@@ -1,0 +1,178 @@
+:root { 
+    --primary-dark: #50614A;
+    --primary-light: #C4E641;
+    --neutral: #E6E9D8;
+    --hover: #668000;   /* po najechaniu na zmienna */
+    --white: #FFFFFF;
+
+    --radius-large: 64px;
+    --radius-medium: 32px;
+    --radius-small:16px;
+
+    --title-large: 72px;
+    --title-medium: 32px;
+
+    --copy-large: 18px;
+    --copy-small: 16px;
+
+    --title-font: "Italiana", sans-serif;
+    --transition: all 0.3s ease-in-out; /* efekt po najechaniu*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {      /*dotyczaca wszystkich elementow - klasa nadrzedna, dobrze jest to zrobic od razu na poczatku np wywalic margines*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; /*faktyczny wymiar elementu to wszytsko w tym padding*/
+    font-size: var(--copy-small);
+    color: var(--primary-dark);
+}
+
+
+body{   /*to tez takie ogolne dla wszystkich, dla calej sekcji body*/
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "wdth" 100,
+      "GRAD" 0,
+      "XOPQ" 96,
+      "XTRA" 468,
+      "YOPQ" 79,
+      "YTAS" 750,
+      "YTDE" -203,
+      "YTFI" 738,
+      "YTLC" 514,
+      "YTUC" 712;
+}
+
+h3 {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    background-color: #f0f0f0; /* Tło */
+    padding: 10px; /* Wewnętrzny odstęp */
+    margin: 20px auto; /* Marginesy: 20px na górze i na dole, auto na bokach dla wyśrodkowania */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Cień */
+}
+
+.list-section{
+    margin: 20px auto; /* Marginesy: 20px na górze i na dole, auto na bokach dla wyśrodkowania */
+    padding: 10px; /* Wewnętrzny odstęp */
+    width: 80%; /* Szerokość */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    border: 1px solid #ccc; 
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    padding: 10px; /* Wewnętrzny odstęp */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Cień */
+}
+
+.empty-item {
+    padding: 5px 0; /* Wewnętrzny odstęp na górze i na dole */
+    border-bottom: 1px solid #eee; /* Linia oddzielająca elementy */
+}
+
+.list-item {
+    display: flex;
+    height: 30px; 
+    justify-content: space-between;  
+    padding: 5px 0; /* Wewnętrzny odstęp na górze i na dole */
+    border-bottom: 1px solid #eee; /* Linia oddzielająca elementy */
+}
+
+.textItem {
+    width: 100%;
+}
+
+.list-item button {
+    padding: 5px;
+    width: 30px;
+    font-size: 10px;
+}
+
+.dateItem {
+    width: 100px;
+    display: none;
+} 
+
+/* .list-item .doneDate {
+    color: #999; /* Kolor daty */
+    /*position: absolute; /* Ustawienie pozycji na absolutną 
+    text-decoration: none;
+}
+
+.modifiedItem {
+    text-decoration: line-through;
+    background-color: #f2f2f2;  /* Dodanie szarego tła
+} */
+
+.todoLabel{
+    margin: 20px auto; 
+    padding: 10px 0px;
+    width: 80%; 
+}
+
+/* Dodatkowy styl dla elementów wewnątrz klasy .todoLabel */
+.todoLabel > * {
+    margin-right: 10px; /* Dodatkowy odstęp między elementami */
+}
+
+input {
+    width: 600px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Tło */
+    outline: none; /* Usunięcie konturu po kliknięciu */
+}
+
+input::placeholder {
+    color: #aaa; /* Kolor tekstu w atrybucie placeholder */
+}
+
+button {
+    width: 60px;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    background-color: #f9f9f9bb; /* Tło */
+    color: #333; /* Kolor tekstu */
+    font-weight: bold; /* Pogrubienie tekstu */
+    cursor: pointer; /* Kursor podczas najechania */
+    transition: background-color 0.3s; /* Efekt przejścia podczas zmiany tła */
+}
+
+button:hover {
+    background-color: #e0e0e0; /* Tło po najechaniu myszą */
+}
+
+dialog {
+    position: fixed;
+    padding: 5px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; 
+    height: 55px; 
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    text-align: center;
+}
+
+.deleteDialog {
+    padding: 15px;
+    width: 400px;
+    height: 150px; 
+}
+
+.deleteDialog p {
+    margin: 5px;
+}
+
+.deleteDialog button {
+    margin: 10px; /* Ustawienie odstępu między przyciskami */
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+
+    <title>To Do List</title>
+</head>
+<body>
+    <h3>To Do List</h3>
+
+    <div class="list-section">
+        <ul id="todo-list">
+            <div id="empty-list" class="empty-item">Empty list</div>
+        </ul>
+    </div>
+
+    <div class="todoLabel">
+        <label for="todo">To do:</label>
+        <input id="todoInput" placeholder="Write what to do...">
+        <button onclick="addToList()">Add</button>
+    </div>
+
+    <!-- Modal zakrywa caly ekran - blokuje to co w tle. Dialog nie, mozna klikac wszystko dookoła
+    W obu przypadkach dialog, inaczej sie go tylko wywoluje-->
+    <dialog id="emptyBox">
+        Pole jest puste
+        <button id="close">OK</button>
+    </dialog>
+
+    <dialog id="deleteBox" class="deleteDialog">
+        <div>
+            <p>Czy na pewno chcesz usunąć zadanie o treści:</p>
+            <p id="deleteItem"></p>
+        </div>
+        <div>
+            <button id="buttonYes">YES</button>
+            <button id="buttonNo">NO</button>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
