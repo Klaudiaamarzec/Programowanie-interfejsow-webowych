@@ -1,0 +1,3 @@
+Stworzenie pliku React
+
+npx create-react-app file_name
