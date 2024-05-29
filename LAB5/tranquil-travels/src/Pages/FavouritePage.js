@@ -29,6 +29,9 @@ const FavouritePage = () => {
                     }
                     {!!user &&
                         <div className="nav-links">
+                            <NavLink to="/chat">
+                                <li><a className="nav-link">Chat</a></li>
+                            </NavLink>
                             <NavLink to="/favourites">
                                 <button className="button primary">Favourites</button>
                             </NavLink>
