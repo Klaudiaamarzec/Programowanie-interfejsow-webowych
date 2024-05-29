@@ -2,7 +2,8 @@ import React from 'react';
 import { useFavourite } from '../contexts/Favourite';
 import {NavLink} from "react-router-dom";
 import {logout, useUser} from "../Firebase/userService";
-//import Hotels from '../Components/Hotels';
+import FavHotels from '../Components/FavouriteHotels';
+import Hotels from "../Components/Hotels";
 
 const FavouritePage = () => {
     const { state: favouriteHotels } = useFavourite();
@@ -37,7 +38,10 @@ const FavouritePage = () => {
                 </ul>
                 <button className="button primary hidden">Menu</button>
             </nav>
-            {/*<Hotels hotels={favouriteHotels} /> /!* Display favourite hotels *!/*/}
+            <section id="browse" className="browse-section">
+                <p className="title-middle">Favorites offers</p>
+                <FavHotels hotels={favouriteHotels}/>
+            </section>
         </div>
     );
 };
